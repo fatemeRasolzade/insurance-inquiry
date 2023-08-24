@@ -4,12 +4,15 @@
 
 @layer base {
   h1 {
-    @apply text-3xl font-medium;
+    @apply text-3xl font-medium mb-8;
   }
 }
 
 @layer components {
   .form-layout {
-    @apply py-8 px-32;
+    @apply py-8 px-32 max-w-3xl;
+  }
+  .input-text {
+    @apply border border-gray rounded p-3 focus-visible:outline-none focus:ring-1 ring-green transition duration-300 text-sm;
   }
 }

@@ -1,7 +1,12 @@
-const InputText = () => {
+interface InputTextProps {
+  placeholder?: string;
+  className?: string;
+}
+
+const InputText = ({ placeholder, className }: InputTextProps) => {
   return (
     <>
-      <input />
+      <input className={`input-text ${className}`} placeholder={placeholder} />
     </>
   );
 };

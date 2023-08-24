@@ -8,6 +8,8 @@ export default {
     extend: {
       colors: {
         lemon: "#fffbeb",
+        gray: "#dedede",
+        green: "#25b79b",
       },
       fontFamily: {
         sans: ["IRANSans"],
