@@ -1,4 +1,4 @@
-import { ReactComponent as LogoIcon } from "./../assets/icons/logoIcon.svg";
+import { ReactComponent as LogoIcon } from "@/assets/icons/logoIcon.svg";
 
 const Header = () => {
   return (

@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
-import bgCar from "../assets/icons/greenCarIcon.svg";
+import bgCar from "@/assets/icons/greenCarIcon.svg";
 
 const Layout = () => {
   return (
