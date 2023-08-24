@@ -10,7 +10,7 @@ export default {
         lemon: "#fffbeb",
       },
       fontFamily: {
-        sans: ["IRANYekan"],
+        sans: ["IRANSans"],
       },
     },
   },
