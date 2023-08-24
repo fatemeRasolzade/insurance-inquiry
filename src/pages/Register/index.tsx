@@ -1,7 +1,8 @@
+import { FC } from "react";
 import Button from "@/components/Button";
 import InputText from "@/components/InputText";
 
-const Register = () => {
+const Register: FC = (): JSX.Element => {
   return (
     <form className="form-layout">
       <h1>ثبت نام</h1>

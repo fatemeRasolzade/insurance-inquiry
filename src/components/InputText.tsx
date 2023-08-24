@@ -1,9 +1,11 @@
+import { FC } from "react";
+
 interface InputTextProps {
   placeholder?: string;
   className?: string;
 }
 
-const InputText = ({ placeholder, className }: InputTextProps) => {
+const InputText: FC<InputTextProps> = ({ placeholder, className }): JSX.Element => {
   return (
     <>
       <input className={`input-text ${className}`} placeholder={placeholder} />

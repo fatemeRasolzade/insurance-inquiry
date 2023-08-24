@@ -1,6 +1,7 @@
+import { FC } from "react";
 import { ReactComponent as LogoIcon } from "@/assets/icons/logoIcon.svg";
 
-const Header = () => {
+const Header: FC = (): JSX.Element => {
   return (
     <header>
       <ul className="flex justify-between py-8 px-14 items-center sticky top-0 z-20 bg-transparent">
