@@ -1,11 +1,13 @@
 import { FC } from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import Button from "@/components/Button";
 import InputText from "@/components/InputText";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { loginUser } from "@/redux/reducers/user/user";
 import { registerValidation } from "@/constants/validations";
+import { enumPaths } from "@/routes/routesUrls";
 
 const defaultValues: defaultValuesProps = {
   firstName: "",
@@ -23,6 +25,7 @@ interface defaultValuesProps {
 
 const Register: FC = (): JSX.Element => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const form = useForm({
     defaultValues,
@@ -31,6 +34,7 @@ const Register: FC = (): JSX.Element => {
 
   const onSubmit = async (values: defaultValuesProps) => {
     dispatch(loginUser(values));
+    navigate(enumPaths.selectInsuranceType);
   };
 
   return (

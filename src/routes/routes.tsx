@@ -1,16 +1,22 @@
 import { createBrowserRouter } from "react-router-dom";
-import Layout from "../layout/Layout";
-import Register from "../pages/Register";
+import InsuranceType from "@/pages/InsuranceType";
+import { enumPaths } from "@/routes/routesUrls";
+import Register from "@/pages/Register";
+import Layout from "@/layout/Layout";
 
 export const routes = createBrowserRouter([
   {
-    path: "/",
+    path: enumPaths.home,
     element: <Layout />,
     errorElement: <div>some things is wrong</div>,
     children: [
       {
-        path: "/",
+        path: enumPaths.home,
         element: <Register />,
+      },
+      {
+        path: enumPaths.selectInsuranceType,
+        element: <InsuranceType />,
       },
     ],
   },

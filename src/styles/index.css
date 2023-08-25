@@ -6,6 +6,9 @@
   h1 {
     @apply text-3xl font-medium mb-8;
   }
+  p {
+    @apply text-sm;
+  }
 }
 
 @layer components {
