@@ -9,6 +9,7 @@
       "@/pages/*": ["pages/*"],
       "@/routes/*": ["routes/*"],
       "@/layout/*": ["layout/*"],
+      "@/services/*": ["services/*"]
     },
     "target": "ESNext",
     "useDefineForClassFields": true,

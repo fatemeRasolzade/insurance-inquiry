@@ -1,4 +1,5 @@
 import { FC, useState } from "react";
+import Loading from "./Loading";
 
 interface listObjectTypes {
   id: number;
@@ -12,6 +13,7 @@ interface InputSelectProps {
   className?: string;
   wrapperClassName?: string;
   list: listObjectTypes[];
+  loading?: boolean;
 }
 
 const InputSelect: FC<InputSelectProps> = ({
@@ -21,6 +23,7 @@ const InputSelect: FC<InputSelectProps> = ({
   className,
   wrapperClassName,
   list = [],
+  loading,
 }): JSX.Element => {
   const [Open, setOpen] = useState(false);
 
@@ -45,8 +48,10 @@ const InputSelect: FC<InputSelectProps> = ({
       <div
         className={`overflow-hidden absolute rounded-md w-full shadow ${Open ? "fade-in" : "fade-out"} z-40`}
       >
-        <ul className="bg-white rounded-md overflow-hidden">
-          {list?.length > 0 ? (
+        <ul className="bg-white rounded-md overflow-auto max-h-[10rem]">
+          {loading ? (
+            <Loading />
+          ) : list?.length > 0 ? (
             list.map((item) => {
               return (
                 <li
