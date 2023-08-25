@@ -13,7 +13,7 @@
     @apply py-8 px-32 max-w-3xl;
   }
   .input-text {
-    @apply border border-gray rounded p-3 focus-visible:outline-none focus:ring-1 ring-green transition duration-300 text-sm;
+    @apply border border-gray rounded p-3 w-full focus-visible:outline-none transition duration-300 text-sm;
   }
   .full-green {
     @apply w-40 bg-green text-white rounded-full py-3 px-10;

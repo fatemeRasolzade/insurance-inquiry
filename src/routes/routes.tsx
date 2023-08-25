@@ -6,6 +6,7 @@ export const routes = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
+    errorElement: <div>some things is wrong</div>,
     children: [
       {
         path: "/",
