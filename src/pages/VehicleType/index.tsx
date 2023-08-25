@@ -49,13 +49,13 @@ const VehicleType: FC = (): JSX.Element => {
           placeholder="نوع خودرو"
           form={form}
           name="carType"
-          list={data?.map((item) => ({ id: item?.id, title: item?.title }))}
+          options={data?.map((item) => ({ id: item?.id, title: item?.title }))}
         />
         <InputSelect
           placeholder="مدل خودرو"
           form={form}
           name="carModel"
-          list={data?.find((item) => item.id === getValues("carType")?.id)?.usages}
+          options={data?.find((item) => item.id === getValues("carType")?.id)?.usages}
         />
       </div>
       <div className="flex justify-between pt-3">

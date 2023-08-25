@@ -31,6 +31,6 @@
     @apply transition translate-y-0 opacity-100 visible duration-1000;
   }
   .fade-out {
-    @apply translate-y-2 opacity-0 invisible duration-0;
+    @apply translate-y-2 opacity-0 invisible duration-100;
   }
 }

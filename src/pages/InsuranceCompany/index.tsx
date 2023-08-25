@@ -44,7 +44,7 @@ const InsuranceCompany: FC = (): JSX.Element => {
         placeholder="شرکت بیمه گر قبلی "
         form={form}
         name="insuranceCompany"
-        list={data?.map((item) => ({ id: item?.id, title: item?.title }))}
+        options={data?.map((item) => ({ id: item?.id, title: item?.title }))}
       />
       <div className="flex justify-between pt-8">
         <Button

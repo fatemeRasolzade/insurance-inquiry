@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import Button from "@/components/Button";
 import { enumApis } from "@/services/enumApis";
 import InputSelect from "@/components/InputSelect";
-import { useFetchOptionsQuery } from "@/services/fetchApis";
+import { useFetchDiscountPercentsQuery } from "@/services/fetchApis";
 
 const defaultValues = {
   thirdPartyInsurance: null,
@@ -11,7 +11,7 @@ const defaultValues = {
 };
 
 const DiscountPercent: FC = (): JSX.Element => {
-  const { data = [], isLoading } = useFetchOptionsQuery(enumApis.getPercents);
+  const { data = [], isLoading } = useFetchDiscountPercentsQuery(enumApis.getPercents);
 
   const form = useForm({
     defaultValues,
@@ -20,7 +20,7 @@ const DiscountPercent: FC = (): JSX.Element => {
   const { getValues } = form;
 
   const handleDisabled = () => {
-    if (getValues("thirdPartyInsurance")?.id && getValues("driverThirdPartyInsurance")?.id) return true;
+    if (getValues("thirdPartyInsurance") && getValues("driverThirdPartyInsurance")) return true;
     return false;
   };
 
@@ -33,7 +33,7 @@ const DiscountPercent: FC = (): JSX.Element => {
         placeholder="درصد تخفیف ثالث"
         form={form}
         name="thirdPartyInsurance"
-        list={data?.map((item) => ({ id: item?.id, title: item?.title }))}
+        options={data}
       />
       <InputSelect
         wrapperClassName="mt-7"
@@ -41,7 +41,7 @@ const DiscountPercent: FC = (): JSX.Element => {
         placeholder="درصد تخفیف حوادث راننده"
         form={form}
         name="driverThirdPartyInsurance"
-        list={data?.map((item) => ({ id: item?.id, title: item?.title }))}
+        options={data?.map((item) => ({ id: item?.id, title: item?.title }))}
       />
       <div className="flex justify-end pt-8">
         <Button
