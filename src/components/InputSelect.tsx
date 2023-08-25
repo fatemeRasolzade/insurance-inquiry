@@ -1,10 +1,8 @@
 import { FC, useState } from "react";
 import Loading from "./Loading";
+import { listObjectType } from "@/constants/interfaces";
 
-interface listObjectTypes {
-  id: number;
-  title: string;
-}
+
 
 interface InputSelectProps {
   form: any;
@@ -12,7 +10,7 @@ interface InputSelectProps {
   placeholder?: string;
   className?: string;
   wrapperClassName?: string;
-  list: listObjectTypes[];
+  list: listObjectType[];
   loading?: boolean;
 }
 
@@ -29,7 +27,7 @@ const InputSelect: FC<InputSelectProps> = ({
 
   const { setValue, getValues, watch } = form;
 
-  const handleSelectItem = (value: any) => {
+  const handleSelectItem = (value: listObjectType) => {
     setValue(name, value);
   };
 

@@ -8,6 +8,7 @@ interface ButtonProps {
   startIcon?: boolean;
   endIcon?: boolean;
   onClick?: MouseEventHandler<HTMLButtonElement>;
+  disabled?: boolean;
 }
 
 const Button: FC<ButtonProps> = ({
@@ -17,9 +18,15 @@ const Button: FC<ButtonProps> = ({
   startIcon,
   endIcon,
   onClick,
+  disabled,
 }): JSX.Element => {
   return (
-    <button onClick={onClick} className={`full-green ${className}`} type={type}>
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      className={`full-green ${className} ${disabled && "opacity-50"}`}
+      type={type}
+    >
       {startIcon && <ArrowIcon className="w-3 rotate-180 absolute right-4 top-[1.2rem]" />}
       {text}
       {endIcon && <ArrowIcon className="w-3 absolute left-4 top-[1.2rem]" />}
