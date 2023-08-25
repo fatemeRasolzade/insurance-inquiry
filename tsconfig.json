@@ -5,6 +5,7 @@
       "@/assets/*": ["assets/*"],
       "@/components/*": ["components/*"],
       "@/constants/*": ["constants/*"],
+      "@/redux/*": ["redux/*"],
     },
     "target": "ESNext",
     "useDefineForClassFields": true,

@@ -1,25 +1,36 @@
 import { FC } from "react";
 import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
+import { useDispatch } from "react-redux";
 import Button from "@/components/Button";
 import InputText from "@/components/InputText";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { loginUser } from "@/redux/reducers/user/user";
 import { registerValidation } from "@/constants/validations";
 
-const defaultValues = {
+const defaultValues: defaultValuesProps = {
   firstName: "",
   lastName: "",
   mobile: "",
   password: "",
 };
 
+interface defaultValuesProps {
+  firstName: string;
+  lastName: string;
+  mobile: string;
+  password: string;
+}
+
 const Register: FC = (): JSX.Element => {
+  const dispatch = useDispatch();
+
   const form = useForm({
     defaultValues,
     resolver: yupResolver(registerValidation),
   });
 
-  const onSubmit = async () => {
-    alert("")
+  const onSubmit = async (values: defaultValuesProps) => {
+    dispatch(loginUser(values));
   };
 
   return (
@@ -32,7 +43,7 @@ const Register: FC = (): JSX.Element => {
           name="mobile"
           form={form}
           wrapperClassName="col-span-2"
-          placeholder=" شماره موبایل (...09)" 
+          placeholder=" شماره موبایل (...09)"
         />
         <InputText name="password" form={form} wrapperClassName="col-span-2" placeholder="رمز عبور" />
       </div>
