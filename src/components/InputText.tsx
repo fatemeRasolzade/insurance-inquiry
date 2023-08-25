@@ -19,9 +19,7 @@ const InputText: FC<InputTextProps> = ({
     register,
     formState: { errors },
   } = form;
-  XMLDocument;
-  console.log("ERROS", form);
-
+  
   return (
     <div className={wrapperClassName}>
       <input
