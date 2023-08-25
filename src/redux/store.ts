@@ -1,6 +1,6 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { User } from "@/redux/reducers/user/user";
-import { Insurance } from "./reducers/user/insurance";
+import { User } from "@/redux/reducers/user";
+import { Insurance } from "./reducers/insurance";
 import { FetchApiService } from "@/services/fetchApis";
 
 const reducers = combineReducers({

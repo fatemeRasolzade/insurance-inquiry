@@ -6,7 +6,7 @@ import InputSelect from "@/components/InputSelect";
 import { useFetchOptionsQuery } from "@/services/fetchApis";
 import Button from "@/components/Button";
 import { enumPaths } from "@/routes/routesUrls";
-import { pushInsurance } from "@/redux/reducers/user/insurance";
+import { pushInsurance } from "@/redux/reducers/insurance";
 import { useDispatch } from "react-redux";
 
 const defaultValues = {

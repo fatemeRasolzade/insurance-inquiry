@@ -9,9 +9,7 @@ const userManagement = createSlice({
     loginUser: (state, action) => {
       state.user = action.payload;
     },
-    logOutUser: (state) => {
-      state.user = initialState.user;
-    },
+    logOutUser: () => initialState,
   },
 });
 

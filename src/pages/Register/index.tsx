@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import Button from "@/components/Button";
 import InputText from "@/components/InputText";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { loginUser } from "@/redux/reducers/user/user";
+import { loginUser } from "@/redux/reducers/user";
 import { registerValidation } from "@/constants/validations";
 import { enumPaths } from "@/routes/routesUrls";
 
@@ -41,8 +41,13 @@ const Register: FC = (): JSX.Element => {
     <form className="form-layout" onSubmit={form.handleSubmit(onSubmit)}>
       <h1>ثبت نام</h1>
       <div className="grid-layout">
-        <InputText name="firstName" form={form} placeholder="نام" />
-        <InputText name="lastName" form={form} placeholder="نام خانوادگی" />
+        <InputText name="firstName" form={form} wrapperClassName="max-sm:col-span-2" placeholder="نام" />
+        <InputText
+          name="lastName"
+          form={form}
+          wrapperClassName="max-sm:col-span-2"
+          placeholder="نام خانوادگی"
+        />
         <InputText
           name="mobile"
           form={form}
@@ -51,7 +56,7 @@ const Register: FC = (): JSX.Element => {
         />
         <InputText name="password" form={form} wrapperClassName="col-span-2" placeholder="رمز عبور" />
       </div>
-      <div className="text-end">
+      <div className="flex justify-end">
         <Button text="ثبت نام" type="submit" />
       </div>
     </form>

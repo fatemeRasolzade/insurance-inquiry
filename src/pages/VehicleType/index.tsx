@@ -7,7 +7,7 @@ import { enumApis } from "@/services/enumApis";
 import { enumPaths } from "@/routes/routesUrls";
 import InputSelect from "@/components/InputSelect";
 import { useFetchOptionsQuery } from "@/services/fetchApis";
-import { pushInsurance } from "@/redux/reducers/user/insurance";
+import { pushInsurance } from "@/redux/reducers/insurance";
 
 const defaultValues = {
   carType: null,
@@ -36,7 +36,7 @@ const VehicleType: FC = (): JSX.Element => {
 
   const handleSubmit = () => {
     dispatch(pushInsurance(getValues()));
-    navigate(enumPaths.selectInsuranceCompany)
+    navigate(enumPaths.selectInsuranceCompany);
   };
 
   return (
@@ -45,6 +45,7 @@ const VehicleType: FC = (): JSX.Element => {
       <p>نوع و مدل خودرو خود را انتخاب کنید.</p>
       <div className="grid-layout mt-10">
         <InputSelect
+          wrapperClassName="max-sm:col-span-2 mb-6"
           loading={isLoading}
           placeholder="نوع خودرو"
           form={form}
@@ -52,6 +53,7 @@ const VehicleType: FC = (): JSX.Element => {
           options={data?.map((item) => ({ id: item?.id, title: item?.title }))}
         />
         <InputSelect
+          wrapperClassName="max-sm:col-span-2"
           placeholder="مدل خودرو"
           form={form}
           name="carModel"
