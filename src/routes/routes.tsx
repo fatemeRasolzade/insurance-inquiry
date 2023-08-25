@@ -3,6 +3,7 @@ import InsuranceType from "@/pages/InsuranceType";
 import { enumPaths } from "@/routes/routesUrls";
 import Register from "@/pages/Register";
 import Layout from "@/layout/Layout";
+import VehicleType from "@/pages/VehicleType";
 
 export const routes = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ export const routes = createBrowserRouter([
       {
         path: enumPaths.selectInsuranceType,
         element: <InsuranceType />,
+      },
+      {
+        path: enumPaths.selectVehicleType,
+        element: <VehicleType />,
       },
     ],
   },

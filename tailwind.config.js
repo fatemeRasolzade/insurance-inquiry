@@ -9,6 +9,7 @@ export default {
       colors: {
         lemon: "#fffbeb",
         gray: "#dedede",
+        darkGray: "#a7a7a7",
         green: "#25b79b",
       },
       fontFamily: {

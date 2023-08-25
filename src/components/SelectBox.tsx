@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { useNavigate } from "react-router-dom";
 import { ReactComponent as InsuranceIcon } from "@/assets/icons/insuranceIcon.svg";
+import { enumPaths } from "@/routes/routesUrls";
 
 interface SelectBoxProps {
   disabled?: boolean;
@@ -10,7 +11,7 @@ const SelectBox: FC<SelectBoxProps> = ({ disabled }): JSX.Element => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    // !disabled && navigate();
+    !disabled && navigate(enumPaths.selectVehicleType);
   };
 
   return (

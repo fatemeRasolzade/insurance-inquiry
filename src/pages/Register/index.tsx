@@ -40,7 +40,7 @@ const Register: FC = (): JSX.Element => {
   return (
     <form className="form-layout" onSubmit={form.handleSubmit(onSubmit)}>
       <h1>ثبت نام</h1>
-      <div className="grid grid-cols-2 gap-x-5 gap-y-3 mb-5">
+      <div className="grid-layout">
         <InputText name="firstName" form={form} placeholder="نام" />
         <InputText name="lastName" form={form} placeholder="نام خانوادگی" />
         <InputText

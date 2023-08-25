@@ -1,5 +1,4 @@
 import { FC } from "react";
-
 import SelectBox from "@/components/SelectBox";
 
 const InsuranceType: FC = (): JSX.Element => {
