@@ -27,9 +27,9 @@ const Button: FC<ButtonProps> = ({
       className={`full-green ${className} ${disabled && "opacity-50"}`}
       type={type}
     >
-      {startIcon && <ArrowIcon className="w-3 rotate-180 absolute right-4 top-[1.2rem]" />}
+      {startIcon && <ArrowIcon className="w-3 rotate-180 absolute right-4 top-[.9rem]" />}
       {text}
-      {endIcon && <ArrowIcon className="w-3 absolute left-4 top-[1.2rem]" />}
+      {endIcon && <ArrowIcon className="w-3 absolute left-4 top-[.9rem]" />}
     </button>
   );
 };

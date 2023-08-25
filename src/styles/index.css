@@ -4,7 +4,7 @@
 
 @layer base {
   h1 {
-    @apply max-sm:text-center text-3xl font-medium mb-8;
+    @apply max-sm:text-center text-2xl font-medium mb-8;
   }
   h2 {
     @apply text-xl font-medium mb-4;

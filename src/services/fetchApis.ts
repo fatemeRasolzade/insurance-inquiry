@@ -5,7 +5,7 @@ type Response = listObjectType[];
 
 export const FetchApiService = createApi({
   reducerPath: "fetchapi",
-  // base url must be declared .env file
+  // base url must be declared .env file 
   baseQuery: fetchBaseQuery({ baseUrl: "https://www.azki.com/api/product/" }),
   endpoints: (builder) => ({
     fetchOptions: builder.query<object[], string>({

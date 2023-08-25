@@ -2,7 +2,7 @@
 
 # Overview
 
-This documentation provides guidance on developing an insurance inquiry task for the interview process. The task involves creating a web application that includes login, registration, and three additional pages for the insurance inquiry process. The application will be developed using Vite, TypeScript, React, Tailwind CSS, React Hook Form, and Yup.
+This documentation provides guidance on developing an insurance inquiry task for the interview process. The task involves creating a web application that includes login, registration, and three additional pages for the insurance inquiry process. The application will be developed using Vite, TypeScript, React, Tailwind CSS, ReduxToolkit, RTKQuery, React Hook Form, and Yup.
 # Prerequisites
 
 Make sure you have the following software installed:

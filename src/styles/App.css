@@ -39,3 +39,18 @@
   /* max-width: 1500px; */
   direction: rtl;
 }
+
+*::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+*::-webkit-scrollbar-track {
+  @apply rounded-lg;
+}
+*::-webkit-scrollbar-thumb {
+  @apply rounded-lg;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #dedede;
+}
