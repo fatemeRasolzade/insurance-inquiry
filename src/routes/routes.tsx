@@ -5,6 +5,7 @@ import Register from "@/pages/Register";
 import Layout from "@/layout/Layout";
 import VehicleType from "@/pages/VehicleType";
 import InsuranceCompany from "@/pages/InsuranceCompany";
+import DiscountPercent from "@/pages/DiscountPercent";
 
 export const routes = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ export const routes = createBrowserRouter([
       {
         path: enumPaths.selectInsuranceCompany,
         element: <InsuranceCompany />,
+      },
+      {
+        path: enumPaths.selectDiscountPercent,
+        element: <DiscountPercent />,
       },
     ],
   },
