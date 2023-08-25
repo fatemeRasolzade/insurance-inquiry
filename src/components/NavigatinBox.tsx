@@ -1,17 +1,13 @@
 import { FC } from "react";
 import { useNavigate } from "react-router-dom";
+import { navigationBoxType } from "@/constants/interfaces";
 import { ReactComponent as InsuranceIcon } from "@/assets/icons/insuranceIcon.svg";
-import { enumPaths } from "@/routes/routesUrls";
 
-interface SelectBoxProps {
-  disabled?: boolean;
-}
-
-const SelectBox: FC<SelectBoxProps> = ({ disabled }): JSX.Element => {
+const NavigationBox: FC<navigationBoxType> = ({ disabled, title, url }): JSX.Element => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    !disabled && navigate(enumPaths.selectVehicleType);
+    !disabled && navigate(url);
   };
 
   return (
@@ -22,9 +18,9 @@ const SelectBox: FC<SelectBoxProps> = ({ disabled }): JSX.Element => {
       }`}
     >
       <InsuranceIcon className={`mx-7 ${disabled ? "opacity-20" : ""} `} />
-      <p className={disabled ? "opacity-20" : ""}>{disabled ? "بدنه" : " شخص ثالث"}</p>
+      <p className={disabled ? "opacity-20" : ""}>{title}</p>
     </div>
   );
 };
 
-export default SelectBox;
+export default NavigationBox;
