@@ -43,7 +43,7 @@ const VehicleType: FC = (): JSX.Element => {
     <div className="form-layout">
       <h1>بیمه شخص ثالث</h1>
       <p>نوع و مدل خودرو خود را انتخاب کنید.</p>
-      <div className="grid-layout mt-10">
+      <div className="grid-layout mt-10 sm:mb-0">
         <InputSelect
           wrapperClassName="max-sm:col-span-2 mb-6"
           loading={isLoading}
@@ -57,7 +57,9 @@ const VehicleType: FC = (): JSX.Element => {
           placeholder="مدل خودرو"
           form={form}
           name="carModel"
-          options={data?.find((item) => item.id === getValues("carType")?.id)?.usages}
+          options={
+            data?.find((item) => item.id === getValues("carType")?.id)?.usages
+          }
         />
       </div>
       <div className="flex justify-between pt-3">

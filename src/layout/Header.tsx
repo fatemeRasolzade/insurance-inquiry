@@ -14,7 +14,7 @@ const Header: FC = (): JSX.Element => {
         </li>
         <li className="font-medium text-lg max-sm:hidden">سامانه مقایسه و خرید آنلاین بیمه</li>
         {user.firstName ? (
-          <li className="flex gap-2">
+          <li className="flex gap-2 items-center">
             <UserIcon className="w-5 h-5" />
             <span>
               {user.firstName} {user.lastName}
